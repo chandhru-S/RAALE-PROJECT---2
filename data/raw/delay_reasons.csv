@@ -1,0 +1,85 @@
+delay_id,surgery_id,delay_category,delay_reason,delay_minutes,avoidable,timestamp
+DELAY001,SURG001,Emergency,Operating theatre preempted by emergency trauma surgery,114,False,2026-09-10 11:54:00
+DELAY002,SURG002,Staff,Key staff (Surgeon/Anaesthetist) STUCK_IN_TRAFFIC,57,True,2026-09-10 12:57:00
+DELAY004,SURG004,Staff,Staff roster data stale / unconfirmed,19,True,2026-09-10 16:19:00
+DELAY007,SURG007,Emergency,Operating theatre preempted by emergency trauma surgery,116,False,2026-09-10 23:56:00
+DELAY011,SURG011,Previous Surgery,Previous theatre session overrun,27,False,2026-09-10 14:27:00
+DELAY013,SURG013,Previous Surgery,Previous theatre session overrun,32,False,2026-09-10 18:32:00
+DELAY020,SURG020,Supplies,Surgical supplies status: MISSING,33,True,2026-09-10 16:33:00
+DELAY023,SURG023,Emergency,Operating theatre preempted by emergency trauma surgery,115,False,2026-09-10 23:55:00
+DELAY026,SURG026,Equipment,Primary equipment faulty,73,True,2026-09-10 13:13:00
+DELAY033,SURG033,Supplies,Surgical supplies status: STERILITY_PENDING,29,True,2026-09-11 10:29:00
+DELAY036,SURG036,Emergency,Operating theatre preempted by emergency trauma surgery,112,False,2026-09-11 17:52:00
+DELAY042,SURG042,Staff,Key staff (Surgeon/Anaesthetist) STUCK_IN_TRAFFIC,40,True,2026-09-11 12:40:00
+DELAY050,SURG050,Equipment,Primary equipment maintenance,60,True,2026-09-11 13:00:00
+DELAY052,SURG052,Emergency,Operating theatre preempted by emergency trauma surgery,113,False,2026-09-11 17:53:00
+DELAY056,SURG056,Staff,Key staff (Surgeon/Anaesthetist) DELAYED_IN_PREV_SURGERY,46,True,2026-09-11 08:46:00
+DELAY059,SURG059,Emergency,Operating theatre preempted by emergency trauma surgery,86,False,2026-09-11 15:26:00
+DELAY063,SURG063,Equipment,Primary equipment maintenance,86,True,2026-09-11 23:26:00
+DELAY065,SURG065,Staff,Staff roster data stale / unconfirmed,12,True,2026-09-12 10:12:00
+DELAY073,SURG073,Emergency,Operating theatre preempted by emergency trauma surgery,77,False,2026-09-12 11:17:00
+DELAY076,SURG076,Equipment,Primary equipment maintenance,41,True,2026-09-12 16:41:00
+DELAY081,SURG081,Staff,Key staff (Surgeon/Anaesthetist) STUCK_IN_TRAFFIC,48,True,2026-09-12 10:48:00
+DELAY089,SURG089,Patient,Patient fasting/consent incomplete or unstable vitals,38,True,2026-09-12 10:38:00
+DELAY095,SURG095,Patient,Patient fasting/consent incomplete or unstable vitals,39,True,2026-09-12 22:39:00
+DELAY099,SURG099,Previous Surgery,Previous theatre session overrun,41,False,2026-09-13 14:41:00
+DELAY105,SURG105,Equipment,Primary equipment maintenance,71,True,2026-09-13 11:11:00
+DELAY112,SURG112,Staff,Staff roster data stale / unconfirmed,30,True,2026-09-13 08:30:00
+DELAY113,SURG113,Staff,Staff roster data stale / unconfirmed,14,True,2026-09-13 10:14:00
+DELAY117,SURG117,Patient,Patient fasting/consent incomplete or unstable vitals,40,True,2026-09-13 18:40:00
+DELAY120,SURG120,Equipment,Primary equipment maintenance,68,True,2026-09-13 09:08:00
+DELAY129,SURG129,Staff,Key staff (Surgeon/Anaesthetist) UNAVAILABLE,39,True,2026-09-14 10:39:00
+DELAY133,SURG133,Supplies,Surgical supplies status: PARTIAL,22,True,2026-09-14 18:22:00
+DELAY134,SURG134,Previous Surgery,Previous theatre session overrun,39,False,2026-09-14 20:39:00
+DELAY135,SURG135,Supplies,Surgical supplies status: MISSING,23,True,2026-09-14 22:23:00
+DELAY144,SURG144,Emergency,Operating theatre preempted by emergency trauma surgery,55,False,2026-09-14 08:55:00
+DELAY145,SURG145,Staff,Key staff (Surgeon/Anaesthetist) DELAYED_IN_PREV_SURGERY,53,True,2026-09-14 10:53:00
+DELAY149,SURG149,Staff,Staff roster data stale / unconfirmed,19,True,2026-09-14 18:19:00
+DELAY150,SURG150,Staff,Key staff (Surgeon/Anaesthetist) STUCK_IN_TRAFFIC,37,True,2026-09-14 20:37:00
+DELAY157,SURG157,Staff,Staff roster data stale / unconfirmed,10,True,2026-09-14 18:10:00
+DELAY158,SURG158,Previous Surgery,Previous theatre session overrun,49,False,2026-09-14 20:49:00
+DELAY170,SURG170,Equipment,Primary equipment faulty,69,True,2026-09-15 13:09:00
+DELAY171,SURG171,Previous Surgery,Previous theatre session overrun,29,False,2026-09-15 14:29:00
+DELAY178,SURG178,Patient,Patient fasting/consent incomplete or unstable vitals,26,True,2026-09-15 12:26:00
+DELAY179,SURG179,Previous Surgery,Previous theatre session overrun,44,False,2026-09-15 14:44:00
+DELAY180,SURG180,Equipment,Primary equipment maintenance,61,True,2026-09-15 17:01:00
+DELAY189,SURG189,Equipment,Primary equipment faulty,49,True,2026-09-15 18:49:00
+DELAY192,SURG192,Previous Surgery,Previous theatre session overrun,45,False,2026-09-15 08:45:00
+DELAY197,SURG197,Previous Surgery,Previous theatre session overrun,48,False,2026-09-16 18:48:00
+DELAY201,SURG201,Staff,Staff roster data stale / unconfirmed,17,True,2026-09-16 10:17:00
+DELAY203,SURG203,Equipment,Primary equipment faulty,66,True,2026-09-16 15:06:00
+DELAY204,SURG204,Staff,Key staff (Surgeon/Anaesthetist) UNAVAILABLE,28,True,2026-09-16 16:28:00
+DELAY209,SURG209,Staff,Key staff (Surgeon/Anaesthetist) STUCK_IN_TRAFFIC,25,True,2026-09-16 10:25:00
+DELAY212,SURG212,Supplies,Surgical supplies status: PARTIAL,17,True,2026-09-16 16:17:00
+DELAY219,SURG219,Staff,Staff roster data stale / unconfirmed,19,True,2026-09-16 14:19:00
+DELAY222,SURG222,Staff,Staff roster data stale / unconfirmed,26,True,2026-09-16 20:26:00
+DELAY223,SURG223,Staff,Staff roster data stale / unconfirmed,20,True,2026-09-16 22:20:00
+DELAY225,SURG225,Staff,Staff roster data stale / unconfirmed,29,True,2026-09-17 10:29:00
+DELAY226,SURG226,Staff,Staff roster data stale / unconfirmed,24,True,2026-09-17 12:24:00
+DELAY228,SURG228,Patient,Patient fasting/consent incomplete or unstable vitals,27,True,2026-09-17 16:27:00
+DELAY230,SURG230,Emergency,Operating theatre preempted by emergency trauma surgery,112,False,2026-09-17 21:52:00
+DELAY231,SURG231,Equipment,Primary equipment faulty,31,True,2026-09-17 22:31:00
+DELAY239,SURG239,Emergency,Operating theatre preempted by emergency trauma surgery,45,False,2026-09-17 22:45:00
+DELAY243,SURG243,Patient,Patient fasting/consent incomplete or unstable vitals,16,True,2026-09-17 14:16:00
+DELAY244,SURG244,Patient,Patient fasting/consent incomplete or unstable vitals,40,True,2026-09-17 16:40:00
+DELAY245,SURG245,Equipment,Primary equipment maintenance,59,True,2026-09-17 18:59:00
+DELAY246,SURG246,Staff,Staff roster data stale / unconfirmed,26,True,2026-09-17 20:26:00
+DELAY248,SURG248,Patient,Patient fasting/consent incomplete or unstable vitals,25,True,2026-09-17 08:25:00
+DELAY267,SURG267,Supplies,Surgical supplies status: PARTIAL,24,True,2026-09-18 14:24:00
+DELAY272,SURG272,Staff,Staff roster data stale / unconfirmed,26,True,2026-09-18 08:26:00
+DELAY273,SURG273,Patient,Patient fasting/consent incomplete or unstable vitals,39,True,2026-09-18 10:39:00
+DELAY278,SURG278,Patient,Patient fasting/consent incomplete or unstable vitals,31,True,2026-09-18 20:31:00
+DELAY280,SURG280,Supplies,Surgical supplies status: MISSING,17,True,2026-09-18 08:17:00
+DELAY281,SURG281,Patient,Patient fasting/consent incomplete or unstable vitals,45,True,2026-09-18 10:45:00
+DELAY289,SURG289,Equipment,Primary equipment maintenance,39,True,2026-09-19 10:39:00
+DELAY296,SURG296,Patient,Patient fasting/consent incomplete or unstable vitals,16,True,2026-09-19 08:16:00
+DELAY298,SURG298,Staff,Staff roster data stale / unconfirmed,18,True,2026-09-19 12:18:00
+DELAY299,SURG299,Staff,Staff roster data stale / unconfirmed,28,True,2026-09-19 14:28:00
+DELAY303,SURG303,Equipment,Primary equipment faulty,42,True,2026-09-19 22:42:00
+DELAY305,SURG305,Staff,Key staff (Surgeon/Anaesthetist) UNAVAILABLE,41,True,2026-09-19 10:41:00
+DELAY308,SURG308,Emergency,Operating theatre preempted by emergency trauma surgery,106,False,2026-09-19 17:46:00
+DELAY309,SURG309,Previous Surgery,Previous theatre session overrun,50,False,2026-09-19 18:50:00
+DELAY312,SURG312,Emergency,Operating theatre preempted by emergency trauma surgery,74,False,2026-09-19 09:14:00
+DELAY313,SURG313,Staff,Key staff (Surgeon/Anaesthetist) UNAVAILABLE,57,True,2026-09-19 10:57:00
+DELAY316,SURG316,Previous Surgery,Previous theatre session overrun,44,False,2026-09-19 16:44:00
+DELAY320,SURG320,Staff,Staff roster data stale / unconfirmed,16,True,2026-09-19 08:16:00
