@@ -28,6 +28,7 @@ export const SurgeryDetailModal: React.FC<Props> = ({ surgeryId, onClose }) => {
   const patient = detail?.patient_readiness;
   const supplies = detail?.sterile_supply;
   const staff = detail?.staff_members || [];
+  const equipment = detail?.equipment || [];
 
   return (
     <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
@@ -116,11 +117,18 @@ export const SurgeryDetailModal: React.FC<Props> = ({ surgeryId, onClose }) => {
                       <Wrench className="w-4 h-4 text-amber-400" />
                       <span>Equipment Status</span>
                     </div>
-                    <span className="text-xs font-mono text-amber-400">VERIFIED</span>
+                    <span className={`text-xs font-mono ${equipment.length > 0 && equipment.every((eq: any) => eq.status === 'READY') ? 'text-emerald-400' : 'text-amber-400'}`}>
+                      {equipment.length > 0 && equipment.every((eq: any) => eq.status === 'READY') ? 'ALL READY' : 'CHECK REQUIRED'}
+                    </span>
                   </div>
                   <div className="text-[11px] text-slate-400 space-y-1 font-mono">
-                    <div>Primary Workstation: READY</div>
-                    <div>Biomedical Clear: CONFIRMED</div>
+                    {equipment.length > 0 ? equipment.map((eq: any, idx: number) => (
+                      <div key={idx}>
+                        {eq.equipment_name}: <span className={eq.status === 'READY' ? 'text-emerald-400' : eq.status === 'FAULTY' ? 'text-rose-400' : 'text-amber-400'}>{eq.status}</span>
+                      </div>
+                    )) : (
+                      <div>No equipment records logged</div>
+                    )}
                   </div>
                 </div>
 

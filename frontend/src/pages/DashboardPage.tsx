@@ -14,19 +14,38 @@ export const DashboardPage: React.FC<Props> = ({ onSelectSurgery, onNavigateTab 
   const [summary, setSummary] = useState<SystemSummary | null>(null);
   const [theatres, setTheatres] = useState<TheatreSummary[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     api.getTheatres()
       .then(res => {
         setSummary(res.summary);
         setTheatres(res.theatres);
+        setError(null);
       })
-      .catch(err => console.error(err))
+      .catch(err => {
+        console.error(err);
+        setError('Unable to connect to backend. Ensure the backend server is running on port 8000.');
+      })
       .finally(() => setLoading(false));
   }, []);
 
   if (loading) {
     return <div className="p-12 text-center text-slate-400 font-mono animate-pulse">Loading live theatre command grid...</div>;
+  }
+
+  if (error) {
+    return (
+      <div className="p-12 text-center space-y-4">
+        <div className="text-rose-400 font-mono text-sm">{error}</div>
+        <button
+          onClick={() => { setLoading(true); setError(null); api.getTheatres().then(res => { setSummary(res.summary); setTheatres(res.theatres); }).catch(() => setError('Backend still unavailable.')).finally(() => setLoading(false)); }}
+          className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-xs font-semibold transition"
+        >
+          Retry Connection
+        </button>
+      </div>
+    );
   }
 
   return (

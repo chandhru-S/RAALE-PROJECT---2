@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Navbar } from './components/Navbar';
 import { DashboardPage } from './pages/DashboardPage';
 import { ReadinessBoardPage } from './pages/ReadinessBoardPage';
@@ -7,14 +7,28 @@ import { AnalyticsPage } from './pages/AnalyticsPage';
 import { FailureSimulatorPage } from './pages/FailureSimulatorPage';
 import { EvaluationPage } from './pages/EvaluationPage';
 import { SurgeryDetailModal } from './components/SurgeryDetailModal';
+import { api } from './services/api';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
   const [selectedSurgeryId, setSelectedSurgeryId] = useState<string | null>(null);
+  const [activeAlertCount, setActiveAlertCount] = useState(0);
+
+  const fetchAlertCount = useCallback(() => {
+    api.getAlerts('ACTIVE')
+      .then(alerts => setActiveAlertCount(alerts.length))
+      .catch(() => setActiveAlertCount(0));
+  }, []);
+
+  useEffect(() => {
+    fetchAlertCount();
+    const interval = setInterval(fetchAlertCount, 30000);
+    return () => clearInterval(interval);
+  }, [fetchAlertCount]);
 
   return (
     <div className="min-h-screen bg-[#0B132B] text-slate-100 flex flex-col font-sans">
-      <Navbar activeTab={activeTab} setActiveTab={setActiveTab} activeAlertCount={3} />
+      <Navbar activeTab={activeTab} setActiveTab={setActiveTab} activeAlertCount={activeAlertCount} />
 
       <main className="flex-1 max-w-7xl w-full mx-auto p-6">
         {activeTab === 'dashboard' && (
@@ -27,10 +41,13 @@ export const App: React.FC = () => {
           <ReadinessBoardPage onSelectSurgery={(id) => setSelectedSurgeryId(id)} />
         )}
         {activeTab === 'alerts' && (
-          <AlertsPage onSelectSurgery={(id) => setSelectedSurgeryId(id)} />
+          <AlertsPage
+            onSelectSurgery={(id) => setSelectedSurgeryId(id)}
+            onRefreshAlerts={fetchAlertCount}
+          />
         )}
         {activeTab === 'analytics' && <AnalyticsPage />}
-        {activeTab === 'simulator' && <FailureSimulatorPage />}
+        {activeTab === 'simulator' && <FailureSimulatorPage onRefreshAlerts={fetchAlertCount} />}
         {activeTab === 'evaluation' && <EvaluationPage />}
       </main>
 

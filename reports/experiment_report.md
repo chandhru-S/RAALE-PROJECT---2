@@ -1,6 +1,6 @@
 # ORRS Experiment & Evaluation Report
 
-**Executed At**: 2026-09-10 05:05:59 UTC  
+**Executed At**: 2026-10-06 08:18:27 UTC  
 **Total Operating Sessions Evaluated**: 320
 
 ## Primary Metric: Avoidable Idle Theatre Minutes per Session

@@ -2,7 +2,7 @@ export type ReadinessStatus = 'READY' | 'AT_RISK' | 'NOT_READY' | 'DATA_INCOMPLE
 
 export interface TheatreSchedule {
   id: number;
-  session_id: str;
+  session_id: string;
   surgery_id: string;
   theatre_id: string;
   department: string;

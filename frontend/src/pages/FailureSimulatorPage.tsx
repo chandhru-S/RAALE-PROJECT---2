@@ -4,7 +4,11 @@ import { SimulationResult } from '../types';
 import { ReadinessBadge } from '../components/ReadinessBadge';
 import { FlaskConical, Users, Wrench, UserX, PackageX, Clock, Siren, RefreshCw, Terminal, CheckCircle2 } from 'lucide-react';
 
-export const FailureSimulatorPage: React.FC = () => {
+interface Props {
+  onRefreshAlerts?: () => void;
+}
+
+export const FailureSimulatorPage: React.FC<Props> = ({ onRefreshAlerts }) => {
   const [loading, setLoading] = useState(false);
   const [activeTest, setActiveTest] = useState<string | null>(null);
   const [log, setLog] = useState<SimulationResult | null>(null);
@@ -17,6 +21,7 @@ export const FailureSimulatorPage: React.FC = () => {
     try {
       const res = await fn();
       setLog(res);
+      if (onRefreshAlerts) onRefreshAlerts();
     } catch (err) {
       console.error(err);
     } finally {
@@ -30,6 +35,7 @@ export const FailureSimulatorPage: React.FC = () => {
       const res = await api.simulate.reset();
       setResetMessage(res.message);
       setLog(null);
+      if (onRefreshAlerts) onRefreshAlerts();
     } catch (err) {
       console.error(err);
     } finally {
